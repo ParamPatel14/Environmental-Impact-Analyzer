@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EcoScore Analyzer</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      padding: 20px;
+      min-width: 300px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .product-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 10px 0;
+      background: #f9f9f9;
+    }
+    .eco-score {
+      font-weight: bold;
+      color: #2ecc71;
+    }
+    .compare-btn {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+    }
+    .product-list {
+      max-height: 400px;
+      overflow-y: auto;
+      margin-top: 20px;
+    }
+    .product-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .product-details {
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>EcoScore Analyzer</h1>
+    <button id="analyze" class="compare-btn">Analyze Product</button>
+  </div>
+  
+  <div id="main-product" class="product-card">
+    <div class="product-name">Current Product</div>
+    <div class="product-details">
+      Eco-Score: <span class="eco-score" id="main-score">-</span>
+      <div class="detail-item">Carbon: <span id="carbon">-</span> kg CO2</div>
+      <div class="detail-item">Water: <span id="water">-</span> liters</div>
+      <div class="detail-item">Energy: <span id="energy">-</span> kWh</div>
+      <div class="detail-item">Toxicity: <span id="toxicity">-</span></div>
+      <div class="detail-item">Recyclability: <span id="recyclability">-</span>%</div>
+    </div>
+  </div>
+
+  <div class="product-list" id="alternatives">
+    <h3>Greener Alternatives</h3>
+    <!-- Alternative products will be populated here -->
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
